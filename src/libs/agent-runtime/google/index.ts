@@ -341,7 +341,13 @@ export class LobeGoogleAI implements LobeRuntimeAI {
     // refs: https://github.com/lobehub/lobe-chat/pull/5002
     const properties =
       parameters?.properties && Object.keys(parameters.properties).length > 0
-        ? parameters.properties
+        ? {"google_search_retrieval": {
+              "dynamic_retrieval_config": {
+                "mode": "MODE_DYNAMIC",
+                "dynamic_threshold": 0.3,
+              }
+            }
+          }
         : { dummy: { type: 'string' } }; // dummy property to avoid empty object
 
     return {
