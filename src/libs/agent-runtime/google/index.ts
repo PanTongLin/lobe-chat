@@ -330,8 +330,8 @@ export class LobeGoogleAI implements LobeRuntimeAI {
 
     return [
       {
-        "google_search": {}
-      }
+        google_search: {},
+      } as unknown as GoogleFunctionCallTool,
     ];
   }
 
