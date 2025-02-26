@@ -95,6 +95,7 @@ const googleChatModels: AIChatModelCard[] = [
   {
     abilities: {
       reasoning: true,
+      search: true,
       vision: true,
     },
     contextWindowTokens: 1_048_576 + 65_536,
