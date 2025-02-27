@@ -7,7 +7,6 @@ import { Center, Flexbox } from 'react-layout-kit';
 
 import { ProductLogo } from '@/components/Branding';
 
-
 const MobileSwitchLoading: DynamicOptions['loading'] = memo(() => {
   const { t } = useTranslation('common');
   return (
